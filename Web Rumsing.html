@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- GANTI: judul & deskripsi SEO -->
+<title>Yayasan Rumah Singgah Bina Bangsa | Lembaga Kesejahteraan Masyarakat Kristen Kota Tegal</title>
+<meta name="description" content="Yayasan Rumah Singgah Bina Bangsa, rumah sosial di Kota Tegal sejak 2011. Menjadi keluarga baru bagi anak-anak untuk bertumbuh, belajar, dan meraih mimpi.">
+<meta property="og:title" content="Yayasan Rumah Singgah Bina Bangsa">
+<meta property="og:description" content="Rumah sosial di Kota Tegal sejak 2011. Mari menjadi bagian dari keluarga besar kami.">
+<meta property="og:type" content="website">
+<!-- GANTI: alamat website asli & gambar pratinjau (1200x630) -->
+<meta property="og:url" content="https://www.contoh-binabangsa.org/">
+<meta property="og:image" content="https://www.contoh-binabangsa.org/og-image.jpg">
+<meta name="theme-color" content="#173F5F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+href="style.css">
+<style>
+:root{--navy:#173F5F;--navy2:#0F2D45;--green:#2E7D6B;--greenl:#E3F0EC;--cream:#FBF5E9;--cream2:#F3EAD6;--orange:#B85A12;--amber:#F0A04B;--ink:#22303C;--mute:#566572;--r:20px;--sh:0 8px 28px rgba(23,63,95,.09)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{font-family:'Nunito Sans',sans-serif;font-size:1.0625rem;line-height:1.7;color:var(--ink);background:var(--cream)}
+h1,h2,h3{font-family:'Lora',serif;line-height:1.25;color:var(--navy)}
+h2{font-size:clamp(1.75rem,4.5vw,2.5rem);margin-bottom:.75rem}
+h3{font-size:1.25rem;margin-bottom:.4rem}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1.25rem}
+section{padding:5rem 0}
+.lead{max-width:60ch;color:var(--mute);margin-bottom:2.5rem}
+.btn{display:inline-block;padding:.85rem 1.6rem;border-radius:999px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;font:inherit;font-weight:700;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-o{background:var(--orange);color:#fff}.btn-o:hover{background:#9C4A0D}
+.btn-l{border-color:#fff;color:#fff}.btn-l:hover{background:rgba(255,255,255,.14)}
+.btn-g{background:var(--green);color:#fff}.btn-g:hover{background:#236354}
+.btn-n{border-color:var(--navy);color:var(--navy)}
+/* NAV */
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(251,245,233,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(23,63,95,.1)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:'Lora',serif;font-weight:700;color:var(--navy);line-height:1.15;font-size:1rem}
+.logo svg{width:38px;height:38px;flex:none}
+.menu{display:flex;gap:1.3rem;list-style:none;align-items:center}
+.menu a{text-decoration:none;font-weight:600;font-size:.95rem;color:var(--navy)}
+.menu a:hover{color:var(--orange)}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:24px;height:2px;background:var(--navy);margin:5px auto;transition:.25s}
+.burger[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger[aria-expanded=true] span:nth-child(2){opacity:0}
+.burger[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+@media(max-width:1020px){
+ .burger{display:block}
+ .menu{position:absolute;top:68px;left:0;right:0;background:var(--cream);flex-direction:column;align-items:stretch;gap:0;padding:.5rem 1.25rem 1.25rem;box-shadow:var(--sh);display:none}
+ .menu.open{display:flex}
+ .menu li a{display:block;padding:.8rem 0;border-bottom:1px solid var(--cream2)}
+ .menu .btn{text-align:center;margin-top:.8rem;border-bottom:0}
+}
+/* HERO */
+.hero{background:linear-gradient(160deg,var(--navy2),var(--navy) 55%,#1F5D63);color:#fff;padding:9rem 0 5rem;position:relative;overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:2.5rem;align-items:center}
+.hero h1{color:#fff;font-size:clamp(2.1rem,6vw,3.6rem);margin-bottom:1.1rem}
+.hero p{color:#E3EDF3;max-width:48ch;margin-bottom:2rem;font-size:1.15rem}
+.hero .acts{display:flex;gap:.8rem;flex-wrap:wrap}
+.house{width:100%;max-width:420px;justify-self:center}
+.win{animation:glow 4s ease-in-out infinite alternate}
+@keyframes glow{from{opacity:.75}to{opacity:1}}
+@media(max-width:820px){.hero{padding-top:7.5rem}.hero .wrap{grid-template-columns:1fr}.house{max-width:260px;order:-1;justify-self:start}}
+/* STAT */
+.stats{padding:0;margin-top:-2.2rem;position:relative;z-index:2}
+.sgrid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:1.8rem 1rem}
+.sgrid div{text-align:center;padding:.5rem}
+.sgrid b{display:block;font-family:'Lora',serif;font-size:2.4rem;color:var(--green);line-height:1.2}
+.sgrid span{color:var(--mute);font-size:.95rem}
+@media(max-width:640px){.sgrid{grid-template-columns:repeat(2,1fr)}}
+/* ABOUT */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.about p+p{margin-top:1rem}
+.vm{background:#fff;border-radius:var(--r);box-shadow:var(--sh);padding:2rem}
+.vm h3{color:var(--green)}
+.vm blockquote{font-family:'Lora',serif;font-style:italic;font-size:1.15rem;color:var(--navy);border-left:4px solid var(--amber);padding-left:1rem;margin:.6rem 0 1.6rem}
+.vm ol{padding-left:1.3rem}.vm li{margin-bottom:.4rem}
+@media(max-width:860px){.about{grid-template-columns:1fr}}
+/* PROGRAM */
+.alt{background:var(--cream2)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.card{background:#fff;border-radius:var(--r);padding:1.8rem;box-shadow:var(--sh)}
+.card p{color:var(--mute);font-size:1rem}
+.ico{width:48px;height:48px;border-radius:14px;background:var(--greenl);display:grid;place-items:center;margin-bottom:1rem}
+.ico svg{width:26px;height:26px;stroke:var(--green);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+@media(max-width:900px){.grid3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.grid3{grid-template-columns:1fr}}
+/* GALERI - placeholder: ganti .ph dengan <img src="foto.jpg" alt="..."> */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.gal figure{border-radius:var(--r);overflow:hidden;background:#fff;box-shadow:var(--sh)}
+.ph{aspect-ratio:4/3;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2));color:rgba(255,255,255,.85);font-size:.85rem}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.gal figcaption{padding:.9rem 1.1rem;font-size:.97rem;color:var(--mute)}
+@media(max-width:800px){.gal{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.gal{grid-template-columns:1fr}}
+/* TESTI */
+.quote{background:#fff;border-radius:var(--r);padding:2rem;box-shadow:var(--sh);border-top:5px solid var(--amber)}
+.quote p{font-family:'Lora',serif;font-style:italic;color:var(--navy);font-size:1.1rem;margin-bottom:1rem}
+.quote cite{font-style:normal;font-weight:700;color:var(--green);font-size:.95rem}
+/* TRANSPARANSI */
+.two{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem}
+.panel{background:#fff;border-radius:var(--r);padding:2rem;box-shadow:var(--sh)}
+.bar{margin-bottom:1.2rem}
+.bar div:first-child{display:flex;justify-content:space-between;font-weight:600;margin-bottom:.35rem}
+.track{height:12px;background:var(--cream2);border-radius:99px;overflow:hidden}
+.fill{height:100%;width:0;border-radius:99px;background:var(--green);transition:width 1.4s cubic-bezier(.2,.7,.2,1)}
+.fill.o{background:var(--orange)}.fill.n{background:var(--navy)}.fill.a{background:var(--amber)}
+.rep{list-style:none;margin:1rem 0 0}
+.rep a{display:flex;justify-content:space-between;gap:1rem;padding:.8rem 0;border-bottom:1px solid var(--cream2);text-decoration:none;font-weight:600;color:var(--navy)}
+.rep a:hover{color:var(--orange)}
+.note{font-size:.9rem;color:var(--mute);margin-top:1rem}
+@media(max-width:860px){.two{grid-template-columns:1fr}}
+/* DONASI */
+.don{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem;margin-bottom:2rem}
+.rek{background:var(--greenl);border-radius:14px;padding:1rem 1.2rem;margin:.8rem 0}
+.rek b{font-family:'Lora',serif;font-size:1.5rem;letter-spacing:.04em;color:var(--navy);display:block}
+.qr{width:170px;aspect-ratio:1;margin:.8rem auto;border:2px dashed #9DB8C8;border-radius:14px;display:grid;place-items:center;color:var(--mute);font-size:.85rem;text-align:center;padding:.5rem}
+.qr img{width:100%;height:100%;object-fit:contain}
+.need{list-style:none}
+.need li{padding:.5rem 0 .5rem 1.6rem;position:relative;border-bottom:1px solid var(--cream2)}
+.need li::before{content:"";position:absolute;left:0;top:1.05rem;width:9px;height:9px;border-radius:50%;background:var(--amber)}
+.konf{background:var(--navy);color:#fff;border-radius:var(--r);padding:2rem;display:flex;gap:1.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap}
+.konf h3{color:#fff;margin:0}.konf p{color:#D5E3EC}
+@media(max-width:900px){.don{grid-template-columns:1fr}}
+/* RELAWAN */
+.rel{background:linear-gradient(135deg,var(--green),#1F5D63);color:#fff;text-align:center}
+.rel h2{color:#fff}.rel p{max-width:56ch;margin:0 auto 1.8rem;color:#E6F3EF}
+/* KONTAK */
+.kon{display:grid;grid-template-columns:.9fr 1.1fr;gap:2rem}
+.kon dl dt{font-weight:700;color:var(--navy);margin-top:1rem}
+.kon dd a{color:var(--green);font-weight:600}
+.map{border:0;width:100%;min-height:340px;height:100%;border-radius:var(--r);box-shadow:var(--sh)}
+.soc{display:flex;gap:.6rem;margin-top:1.2rem;flex-wrap:wrap}
+.soc a{padding:.45rem 1rem;border-radius:99px;background:#fff;box-shadow:var(--sh);text-decoration:none;font-weight:600;color:var(--navy);font-size:.95rem}
+@media(max-width:860px){.kon{grid-template-columns:1fr}}
+/* FOOTER */
+footer{background:var(--navy2);color:#C9D9E4;padding:3.5rem 0 1.5rem;font-size:.97rem}
+footer h3{color:#fff;font-size:1.05rem}
+.fg{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:2rem;margin-bottom:2rem}
+footer ul{list-style:none}footer li{margin:.3rem 0}footer a{text-decoration:none}footer a:hover{color:var(--amber)}
+.copy{border-top:1px solid rgba(255,255,255,.15);padding-top:1.2rem;font-size:.88rem}
+@media(max-width:760px){.fg{grid-template-columns:1fr}}
+/* WA & toast */
+.wa{position:fixed;right:1rem;bottom:1rem;z-index:60;width:58px;height:58px;border-radius:50%;background:#1E8E4E;display:grid;place-items:center;box-shadow:0 6px 18px rgba(0,0,0,.25)}
+.wa svg{width:30px;height:30px;fill:#fff}
+.toast{position:fixed;left:50%;bottom:5.5rem;transform:translate(-50%,20px);background:var(--navy);color:#fff;padding:.7rem 1.3rem;border-radius:99px;opacity:0;pointer-events:none;transition:.3s;z-index:70}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+/* Reveal: hanya satu fade lembut pada judul bagian */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="wrap nav">
+ <a class="logo" href="#beranda" aria-label="Beranda Yayasan Rumah Singgah Bina Bangsa">
+  <!-- GANTI: logo asli (ganti <svg> ini dengan <img src="logo.png" alt="Logo Binabangsa" width="38" height="38">) -->
+  <img src="Logo.png" alt="Logo Bina Bangsa" width="38" height="38"
+     onclick="tampilkanGambar()">
+  <span>Rumah Singgah<br>Bina Bangsa</span>
+ </a>
+ <button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+ <ul class="menu" id="menu">
+  <li><a href="#beranda">Beranda</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#program">Program</a></li>
+  <li><a href="#kegiatan">Kegiatan</a></li><li><a href="#transparansi">Transparansi</a></li><li><a href="#donasi">Donasi</a></li><li><a href="#kontak">Kontak</a></li>
+  <li><a class="btn btn-o" href="#donasi">Donasi Sekarang</a></li>
+ </ul>
+</div>
+</header>
+
+<!-- POPUP LOGO -->
+<div id="popup" class="popup" onclick="tutupGambar()">
+    <img src="Logo.png" alt="Logo Bina Bangsa">
+</div>
+
+<script>
+function tampilkanGambar() {
+    document.getElementById("popup").style.display = "flex";
+}
+
+function tutupGambar() {
+    document.getElementById("popup").style.display = "none";
+}
+</script>
+
+<main>
+<!-- HERO -->
+<section class="hero" id="beranda" style="padding-bottom:6rem">
+<div class="wrap">
+ <div>
+  <h1>Setiap anak berhak punya rumah untuk pulang dan mimpi untuk dikejar.</h1>
+  <p>Sejak 2011, Yayasan Rumah Singgah Bina Bangsa di Kota Tegal menjadi keluarga baru bagi anak-anak yang membutuhkan, tempat mereka dikasihi, belajar, dan bertumbuh.</p>
+  <div class="acts"><a class="btn btn-o" href="#donasi">Donasi Sekarang</a><a class="btn btn-l" href="#tentang">Pelajari Lebih Lanjut</a></div>
+ </div>
+ <!-- Ilustrasi rumah (tanpa wajah anak). Boleh diganti foto latar suasana rumah/kegiatan tanpa wajah jelas -->
+ <div class="hero-image">
+    <img src="rumah.png" alt="Rumah Bina Bangsa">
+</div>
+
+</div>
+</section>
+
+<!-- STATISTIK: ganti angka relawan & program dengan data asli -->
+<section class="stats" aria-label="Dampak kami">
+<div class="wrap"><div class="sgrid">
+ <div><b data-n="24">0</b><span>Anak asuh saat ini</span></div>
+ <div><b data-n="15" data-tahun="2011">0</b><span>Tahun melayani (sejak 2011)</span></div>
+ <div><b data-n="30">0</b><span>Relawan <!-- GANTI --></span></div>
+ <div><b data-n="6">0</b><span>Program pembinaan</span></div>
+</div></div>
+</section>
+
+<!-- TENTANG -->
+<section id="tentang">
+<div class="wrap about">
+ <div class="rv">
+  <h2>Tentang Kami</h2>
+  <!-- GANTI: tulis sejarah singkat yang sebenarnya (pendiri, latar belakang, perjalanan) -->
+  <p>Yayasan Rumah Singgah Binabangsa berdiri pada tahun 2011 di Kota Tegal sebagai rumah sosial yang membuka pintu bagi anak-anak yang membutuhkan tempat tinggal, perhatian, dan pendampingan.</p>
+  <p>Di sini, setiap anak diterima apa adanya dan dibimbing untuk mengenal Tuhan, menempuh pendidikan, serta membangun karakter yang baik. Kami percaya anak-anak ini bukan sekadar penerima bantuan, melainkan calon pembawa berkat bagi sesamanya.</p>
+ </div>
+ <div class="vm rv">
+  <h3>Visi</h3>
+  <blockquote>Terbentuk anak-anak yang takut akan Tuhan dan berhasil meraih mimpi sehingga menjadi berkat untuk semua.</blockquote>
+  <h3>Misi</h3>
+  <ol>
+   <li>Memberikan penerimaan atas dasar kasih Tuhan.</li>
+   <li>Mengenal, mengerti, dan bertumbuh di dalam kebenaran Firman Tuhan.</li>
+   <li>Menjadi keluarga baru bagi sesama yang membutuhkan.</li>
+   <li>Memenuhi kebutuhan jasmani dan rohani.</li>
+   <li>Memperhatikan kesehatan fisik dan mental.</li>
+   <li>Menuntun anak-anak menempuh pendidikan akademi dan pendidikan profesi.</li>
+   <li>Membentuk anak-anak berkarakter baik.</li>
+  </ol>
+ </div>
+</div>
+</section>
+
+<!-- PROGRAM -->
+<section class="alt" id="program">
+<div class="wrap">
+ <div class="rv"><h2>Program &amp; Layanan</h2>
+ <p class="lead">Kami merawat anak-anak secara utuh: tubuh, pikiran, hati, dan masa depan mereka.</p></div>
+ <div class="grid3">
+  <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2.5 9 2.5 12 0v-5"/></svg></div><h3>Pendidikan</h3><p>Pendampingan sekolah, bimbingan belajar, dan dukungan menuju pendidikan akademi maupun profesi.</p></article>
+  <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M12 20s-8-5-8-11a4.5 4.5 0 018-2.5A4.5 4.5 0 0120 9c0 6-8 11-8 11z"/></svg></div><h3>Kesehatan Fisik &amp; Mental</h3><p>Pemeriksaan rutin, kebersihan, serta ruang aman untuk bercerita dan dikuatkan.</p></article>
+  <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 11h16a8 8 0 01-16 0z"/><path d="M8 7c0-1.5 1-1.5 1-3M12 7c0-1.5 1-1.5 1-3M16 7c0-1.5 1-1.5 1-3"/></svg></div><h3>Makan Bergizi</h3><p>Makanan sehat tiga kali sehari agar anak-anak tumbuh kuat dan bersemangat belajar.</p></article>
+  <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M14 6l4 4L8 20H4v-4z"/><path d="M13 7l4 4"/></svg></div><h3>Pembinaan Keterampilan</h3><p>Pelatihan sesuai minat dan bakat sebagai bekal kemandirian di masa depan.</p></article>
+  <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M12 7v7M9 10h6"/></svg></div><h3>Bimbingan Rohani</h3><p>Doa, ibadah, dan pendalaman Firman Tuhan agar iman bertumbuh bersama karakter.</p></article>
+  <article class="card"><div class="ico"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><circle cx="17" cy="9" r="2.4"/><path d="M3 20c0-4 3-6 6-6s6 2 6 6M15 14.5c3 0 6 1.5 6 5.5"/></svg></div><h3>Pembentukan Karakter</h3><p>Kebiasaan baik, tanggung jawab, dan kepedulian ditanamkan lewat kehidupan sehari-hari di rumah.</p></article>
+ </div>
+</div>
+</section>
+
+<!-- KEGIATAN -->
+<section id="kegiatan">
+<div class="wrap">
+ <div class="rv"><h2>Kegiatan Kami</h2>
+ <p class="lead">Potret keseharian di rumah kami.</p></div>
+ <!-- PENTING: Minta IZIN TERTULIS wali/pengurus sebelum mengunggah foto anak. Pilih foto tanpa wajah jelas (dari belakang, tangan, suasana).
+      Untuk mengganti: hapus <div class="ph">, lalu isi <img src="galeri1.jpg" alt="Deskripsi foto" loading="lazy"> -->
+ <div class="gal">
+  <figure><div class="ph" style="--c1:#2E7D6B;--c2:#173F5F" role="img" aria-label="Placeholder foto belajar bersama">Foto 1</div><figcaption>Belajar bersama setiap sore</figcaption></figure>
+  <figure><div class="ph" style="--c1:#B85A12;--c2:#F0A04B" role="img" aria-label="Placeholder foto makan bersama">Foto 2</div><figcaption>Makan bersama sebagai satu keluarga</figcaption></figure>
+  <figure><div class="ph" style="--c1:#173F5F;--c2:#1F5D63" role="img" aria-label="Placeholder foto ibadah">Foto 3</div><figcaption>Ibadah dan doa bersama</figcaption></figure>
+  <figure><div class="ph" style="--c1:#1F5D63;--c2:#2E7D6B" role="img" aria-label="Placeholder foto pelatihan keterampilan">Foto 4</div><figcaption>Pelatihan keterampilan</figcaption></figure>
+  <figure><div class="ph" style="--c1:#F0A04B;--c2:#B85A12" role="img" aria-label="Placeholder foto olahraga">Foto 5</div><figcaption>Olahraga dan bermain di halaman</figcaption></figure>
+  <figure><div class="ph" style="--c1:#2E7D6B;--c2:#F0A04B" role="img" aria-label="Placeholder foto perayaan">Foto 6</div><figcaption>Perayaan hari besar</figcaption></figure>
+ </div>
+</div>
+</section>
+
+<!-- TESTIMONI: contoh teks. GANTI dengan kutipan asli (dengan izin), atau gunakan inisial/nama samaran -->
+<section class="alt">
+<div class="wrap">
+ <div class="rv"><h2>Cerita dari Rumah Kami</h2><p class="lead">Kutipan di bawah adalah contoh dan perlu diganti dengan cerita asli.</p></div>
+ <div class="grid3" style="grid-template-columns:repeat(auto-fit,minmax(260px,1fr))">
+  <blockquote class="quote"><p>“Di sini saya belajar bahwa saya berharga dan punya masa depan.”</p><cite>Alumni, kini bekerja <!-- GANTI --></cite></blockquote>
+  <blockquote class="quote"><p>“Anak kami tumbuh lebih percaya diri dan rajin beribadah sejak dibimbing di rumah ini.”</p><cite>Wali anak asuh <!-- GANTI --></cite></blockquote>
+  <blockquote class="quote"><p>“Menjadi relawan di sini mengajarkan saya arti memberi dengan tulus.”</p><cite>Relawan <!-- GANTI --></cite></blockquote>
+ </div>
+</div>
+</section>
+
+<!-- TRANSPARANSI: persentase hanyalah contoh. GANTI sesuai laporan keuangan asli (total harus 100%) -->
+<section id="transparansi">
+<div class="wrap">
+ <div class="rv"><h2>Transparansi Dana</h2><p class="lead">Kami berkomitmen melaporkan setiap rupiah yang dipercayakan kepada kami.</p></div>
+ <div class="two">
+  <div class="panel" id="bars">
+   <h3>Penggunaan dana donasi</h3>
+   <div class="bar"><div><span>Makan &amp; kebutuhan harian</span><span>40%</span></div><div class="track"><div class="fill" data-w="40"></div></div></div>
+   <div class="bar"><div><span>Pendidikan</span><span>25%</span></div><div class="track"><div class="fill n" data-w="25"></div></div></div>
+   <div class="bar"><div><span>Kesehatan</span><span>10%</span></div><div class="track"><div class="fill o" data-w="10"></div></div></div>
+   <div class="bar"><div><span>Pembinaan &amp; bimbingan rohani</span><span>15%</span></div><div class="track"><div class="fill a" data-w="15"></div></div></div>
+   <div class="bar"><div><span>Operasional rumah</span><span>10%</span></div><div class="track"><div class="fill" data-w="10" style="background:#7C8D99"></div></div></div>
+   <p class="note">Data contoh. Perbarui setiap periode laporan.</p>
+  </div>
+  <div class="panel">
+   <h3>Laporan keuangan</h3>
+   <ul class="rep">
+    <!-- GANTI href dengan file PDF asli (unggah ke hosting, mis. laporan/2025.pdf) -->
+    <li><a href="laporan/keuangan-2025.pdf" download><span>Laporan Keuangan 2025</span><span>PDF</span></a></li>
+    <li><a href="laporan/keuangan-2024.pdf" download><span>Laporan Keuangan 2024</span><span>PDF</span></a></li>
+    <li><a href="laporan/keuangan-2023.pdf" download><span>Laporan Keuangan 2023</span><span>PDF</span></a></li>
+   </ul>
+  </div>
+ </div>
+</div>
+</section>
+
+<!-- DONASI -->
+<section class="alt" id="donasi">
+<div class="wrap">
+ <div class="rv"><h2>Cara Berdonasi</h2><p class="lead">Setiap bentuk kebaikan, besar maupun kecil, sangat berarti bagi keluarga kami.</p></div>
+ <div class="don">
+  <div class="card">
+   <h3>Transfer bank</h3>
+   <!-- GANTI: nama bank, nomor rekening, atas nama -->
+   <p>Bank <b id="bank">[BCA]</b></p>
+   <div class="rek"><b id="norek">0472210929</b><span>a.n. Yayasan Rumah Singgah Bina Bangsa</span></div>
+   <button class="btn btn-g" id="copy" type="button">Salin nomor rekening</button>
+  </div>
+  <div class="card" style="text-align:center">
+   <h3>QRIS</h3>
+   <!-- GANTI: isi dengan <img src="qris.png" alt="Kode QRIS Yayasan Rumah Singgah Binabangsa"> -->
+   <div class="qr" role="img" aria-label="Placeholder kode QRIS"><img src="qrcode.jpeg" alt="Kode Qris Yayasan Rumah Singgah Bina Bangsa"></div>
+   <p>Pindai dengan aplikasi bank atau dompet digital.</p>
+  </div>
+  <div class="card">
+   <h3>Donasi barang</h3>
+   <!-- GANTI: daftar kebutuhan terkini -->
+   <ul class="need"><li>Beras dan bahan makanan pokok</li><li>Perlengkapan sekolah</li><li>Perlengkapan mandi dan kebersihan</li><li>Pakaian layak pakai</li><li>Buku bacaan anak</li></ul>
+  </div>
+ </div>
+ <div class="konf">
+  <div><h3>Sudah berdonasi?</h3><p>Kabari kami lewat WhatsApp agar donasi Anda dapat kami catat dan syukuri bersama.</p></div>
+  <a class="btn btn-o" id="konfirm" href="#" target="_blank" rel="noopener">Konfirmasi via WhatsApp</a>
+ </div>
+</div>
+</section>
+
+<!-- RELAWAN -->
+<section class="rel" id="relawan">
+<div class="wrap rv">
+ <h2>Jadi Relawan</h2>
+ <p>Punya waktu, keahlian, atau sekadar hati yang mau hadir? Mengajar, mendampingi belajar, atau menemani kegiatan, kami menyambut Anda sebagai bagian dari keluarga.</p>
+ <a class="btn btn-o" id="relawanwa" href="#" target="_blank" rel="noopener">Daftar via WhatsApp</a>
+</div>
+</section>
+
+<!-- KONTAK -->
+<section id="kontak">
+<div class="wrap">
+ <div class="rv"><h2>Kontak &amp; Kunjungan</h2><p class="lead">Kami senang menerima kunjungan Anda. Mohon hubungi kami terlebih dahulu.</p></div>
+ <div class="kon">
+  <div>
+   <dl>
+    <dt>Alamat</dt><dd>Jl. Metro No. 48, Kota Tegal, Jawa Tengah 52115</dd>
+    <dt>Telepon / WhatsApp</dt><dd><a href="tel:+62 895-3832-46045">+62 895-3832-46045</a> <!-- GANTI --></dd>
+    <dt>Email</dt><dd><a href="mailto:info@contoh.org">info@contoh.org</a> <!-- GANTI --></dd>
+    <dt>Jam kunjungan</dt><dd>Setiap hari, 10.00 - 16.00 WIB <!-- GANTI --></dd>
+   </dl>
+   <div class="soc"><!-- GANTI: tautan media sosial asli -->
+    <a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a>
+    <a href="https://facebook.com/" target="_blank" rel="noopener">Facebook</a>
+    <a href="https://youtube.com/" target="_blank" rel="noopener">YouTube</a>
+   </div>
+  </div>
+  <iframe class="map" title="Peta lokasi Yayasan Rumah Singgah Binabangsa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+   src="https://www.google.com/maps?q=Jl.+Metro+No.48,+Tegal&amp;output=embed"></iframe>
+ </div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap">
+ <div class="fg">
+  <div><h3>Yayasan Rumah Singgah Binabangsa</h3><p>Rumah sosial di Kota Tegal sejak 2011. Menjadi keluarga baru bagi anak-anak untuk bertumbuh dan meraih mimpi.</p></div>
+  <div><h3>Tautan cepat</h3><ul><li><a href="#tentang">Tentang</a></li><li><a href="#program">Program</a></li><li><a href="#transparansi">Transparansi</a></li><li><a href="#donasi">Donasi</a></li></ul></div>
+  <div><h3>Legalitas</h3><!-- GANTI: nomor SK/izin asli -->
+   <p>SK Kemensos / Izin No. [nomor izin]<br>Akta Pendirian No. [nomor akta]</p></div>
+ </div>
+ <p class="copy">&copy; <span id="yr">2026</span> Yayasan Rumah Singgah Binabangsa. Seluruh hak cipta dilindungi.</p>
+</div>
+</footer>
+
+<a class="wa" id="wafloat" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.800l-.3-.2-3 .8.8-2.900-.2-.3A8 8 0 0112 4z"/><path d="M8.500 7.500c-.3.3-.8 1-.8 1.800 0 2.400 3.200 5.700 6 6 .8.100 1.500-.4 1.800-.8.200-.3.100-.6-.1-.7l-1.500-.8c-.3-.1-.5 0-.7.200l-.5.600c-.2.200-.4.200-.6.100-1-.5-2-1.500-2.400-2.400-.1-.2 0-.4.100-.5l.5-.6c.2-.2.200-.4.100-.6l-.7-1.500c-.1-.3-.5-.4-.7-.2z"/></svg></a>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+/* GANTI: nomor WhatsApp format internasional tanpa + / 0 di depan (contoh: 6281234567890) */
+const WA='6280000000000';
+const wa=t=>`https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+document.getElementById('konfirm').href=wa('Halo Yayasan Rumah Singgah Binabangsa, saya ingin mengonfirmasi donasi.\nNama: \nNominal/Barang: \nTanggal: \nTerima kasih.');
+document.getElementById('relawanwa').href=wa('Halo, saya tertarik menjadi relawan di Rumah Singgah Binabangsa. Mohon informasinya.');
+document.getElementById('wafloat').href=wa('Halo Rumah Singgah Binabangsa, saya ingin bertanya.');
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* Menu hamburger */
+const bg=document.querySelector('.burger'),mn=document.getElementById('menu');
+bg.addEventListener('click',()=>{const o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Tutup menu':'Buka menu')});
+mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('open');bg.setAttribute('aria-expanded',false)}});
+
+/* Salin rekening */
+const toast=m=>{const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200)};
+document.getElementById('copy').addEventListener('click',async()=>{
+ const n=document.getElementById('norek').textContent.trim();
+ try{await navigator.clipboard.writeText(n)}catch(e){const i=document.createElement('input');i.value=n;document.body.appendChild(i);i.select();document.execCommand('copy');i.remove()}
+ toast('Nomor rekening disalin');
+});
+
+/* Hitung naik, bilah dana, dan fade-in */
+const yearsNow=()=>new Date().getFullYear()-2011;
+document.querySelector('[data-tahun]').dataset.n=yearsNow(); // otomatis dari tahun berdiri
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+ if(!e.isIntersecting)return;const el=e.target;io.unobserve(el);
+ if(el.dataset.n){const end=+el.dataset.n,t0=performance.now();
+  const step=t=>{const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+ else if(el.id==='bars'){el.querySelectorAll('.fill').forEach(f=>f.style.width=f.dataset.w+'%')}
+ else el.classList.add('in');
+}),{threshold:.25});
+document.querySelectorAll('[data-n],#bars,.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
