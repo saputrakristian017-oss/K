@@ -157,6 +157,14 @@ footer ul{list-style:none}footer li{margin:.3rem 0}footer a{text-decoration:none
 .rv{opacity:0;transform:translateY(14px);transition:opacity .8s,transform .8s}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+/* TRANSISI HALAMAN HALUS */
+@view-transition{navigation:auto}
+header{view-transition-name:header}
+::view-transition-old(root),::view-transition-new(root){animation-duration:.35s}
+@supports not (view-transition-name:none){
+  body{animation:halamanMasuk .4s ease both}
+  @keyframes halamanMasuk{from{opacity:0}to{opacity:1}}
+}
 </style>
 </head>
 <body>
@@ -171,10 +179,16 @@ footer ul{list-style:none}footer li{margin:.3rem 0}footer a{text-decoration:none
  </a>
  <button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
  <ul class="menu" id="menu">
-  <li><a href="#beranda">Beranda</a></li><li><a href="#tentang">Tentang</a></li><li><a href="#program">Program</a></li>
-  <li><a href="#kegiatan">Kegiatan</a></li><li><a href="#transparansi">Transparansi</a></li><li><a href="#donasi">Donasi</a></li><li><a href="#kontak">Kontak</a></li>
+  <li><a href="#beranda">Beranda</a></li>
+  <li><a href="#tentang">Tentang</a></li>
+  <li><a href="#program">Program</a></li>
+  <li><a href="#kegiatan">Kegiatan</a></li>
+  <li><a href="struktur.html">Struktur</a></li>
+  <li><a href="#transparansi">Transparansi</a></li>
+  <li><a href="#donasi">Donasi</a></li>
+  <li><a href="#kontak">Kontak</a></li>
   <li><a class="btn btn-o" href="#donasi">Donasi Sekarang</a></li>
- </ul>
+</ul>
 </div>
 </header>
 
@@ -304,7 +318,7 @@ function tutupGambar() {
    <div class="bar"><div><span>Kesehatan</span><span>10%</span></div><div class="track"><div class="fill o" data-w="10"></div></div></div>
    <div class="bar"><div><span>Pembinaan &amp; bimbingan rohani</span><span>15%</span></div><div class="track"><div class="fill a" data-w="15"></div></div></div>
    <div class="bar"><div><span>Operasional rumah</span><span>10%</span></div><div class="track"><div class="fill" data-w="10" style="background:#7C8D99"></div></div></div>
-   <p class="note">Data contoh. Perbarui setiap periode laporan.</p>
+   <p class="note">Data di Perbarui Setiap Periode Laporan.</p>
   </div>
   <div class="panel">
    <h3>Laporan keuangan</h3>
