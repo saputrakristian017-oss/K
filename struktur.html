@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Struktur Keanggotaan | Yayasan Rumah Singgah Bina Bangsa</title>
+<meta name="description" content="Struktur keanggotaan Yayasan Rumah Singgah Bina Bangsa: pemimpin, staf utama, anak asuh, dan mentor eksternal.">
+<meta name="theme-color" content="#173F5F">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<!-- Urutan sama seperti index.html: style.css dulu, lalu struktur.css -->
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="struktur.css">
+</head>
+<body>
+
+<!-- ================= HEADER / NAVBAR (sama dengan index.html) ================= -->
+<header>
+<div class="wrap nav">
+ <a class="logo" href="index.html" aria-label="Beranda Yayasan Rumah Singgah Bina Bangsa">
+  <img src="Logo.png" alt="Logo Bina Bangsa" width="38" height="38" onclick="tampilkanGambar(event)">
+  <span>Rumah Singgah<br>Bina Bangsa</span>
+ </a>
+ <button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
+ <ul class="menu" id="menu">
+  <li><a href="index.html#beranda">Beranda</a></li>
+  <li><a href="index.html#tentang">Tentang</a></li>
+  <li><a href="index.html#program">Program</a></li>
+  <li><a href="index.html#kegiatan">Kegiatan</a></li>
+  <!-- MENU BARU: halaman ini -->
+  <li><a href="struktur.html" aria-current="page">Struktur</a></li>
+  <li><a href="index.html#transparansi">Transparansi</a></li>
+  <li><a href="index.html#donasi">Donasi</a></li>
+  <li><a href="index.html#kontak">Kontak</a></li>
+  <li><a class="btn btn-o" href="index.html#donasi">Donasi Sekarang</a></li>
+ </ul>
+</div>
+</header>
+
+<!-- POPUP LOGO (sama dengan index.html) -->
+<div id="popup" class="popup" onclick="tutupGambar()">
+ <img src="Logo.png" alt="Logo Bina Bangsa">
+</div>
+
+<main>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="beranda" style="padding-bottom:6rem">
+<div class="wrap">
+ <div>
+  <h1>Struktur Keanggotaan</h1>
+  <p>Mengenal keluarga besar yang bersama-sama melayani, mendukung, dan bertumbuh dalam yayasan.</p>
+  <div class="acts"><a class="btn btn-o" href="#pemimpin">Kenali Kami</a><a class="btn btn-l" href="index.html">Kembali ke Beranda</a></div>
+ </div>
+ <div class="hero-image">
+  <img src="rumah.png" alt="Rumah Bina Bangsa">
+ </div>
+</div>
+</section>
+
+<!-- ================= STATISTIK ANGGOTA =================
+     GANTI angka pada data-n="..." jika jumlah anggota berubah. -->
+<section class="stats" aria-label="Jumlah anggota">
+<div class="wrap"><div class="sgrid">
+ <div><b data-n="2">0</b><span>Pemimpin</span></div>
+ <div><b data-n="2">0</b><span>Staf Utama</span></div>
+ <div><b data-n="19">0</b><span>Anak Asuh</span></div>
+ <div><b data-n="10">0</b><span>Mentor Eksternal</span></div>
+</div></div>
+</section>
+
+<!-- ================= PEMIMPIN YAYASAN =================
+     GANTI: nama (h3), jabatan (span.role), deskripsi (p), foto (src + alt). -->
+<section id="pemimpin">
+<div class="wrap">
+ <div class="rv"><h2>Pemimpin Yayasan</h2><p class="lead">Mereka yang memimpin dan menjaga arah pelayanan yayasan.</p></div>
+ <div class="grid-orang">
+
+  <!-- Pemimpin 1 | foto: images/struktur/pemimpin-1.jpg -->
+  <article class="member member-besar">
+   <div class="foto"><img src="images/struktur/pemimpin-1.jpg" alt="Foto [Nama Pemimpin 1]" loading="lazy"></div>
+   <div class="isi">
+    <span class="role">Pemimpin Yayasan</span>
+    <h3>[Nama Pemimpin 1]</h3>
+    <p>[Deskripsi singkat tentang peran dan pelayanan beliau di yayasan.]</p>
+   </div>
+  </article>
+
+  <!-- Pemimpin 2 | foto: images/struktur/pemimpin-2.jpg -->
+  <article class="member member-besar">
+   <div class="foto"><img src="images/struktur/pemimpin-2.jpg" alt="Foto [Nama Pemimpin 2]" loading="lazy"></div>
+   <div class="isi">
+    <span class="role">Pemimpin Yayasan</span>
+    <h3>[Nama Pemimpin 2]</h3>
+    <p>[Deskripsi singkat tentang peran dan pelayanan beliau di yayasan.]</p>
+   </div>
+  </article>
+
+ </div>
+</div>
+</section>
+
+<!-- ================= STAF UTAMA ================= -->
+<section class="alt" id="staf">
+<div class="wrap">
+ <div class="rv"><h2>Staf Utama</h2><p class="lead">Tim yang setiap hari mendampingi dan menjalankan kegiatan di rumah.</p></div>
+ <div class="grid-orang">
+
+  <!-- Staf 1 | foto: images/struktur/staf-1.jpg -->
+  <article class="member member-besar">
+   <div class="foto"><img src="images/struktur/staf-1.jpg" alt="Foto [Nama Staf 1]" loading="lazy"></div>
+   <div class="isi">
+    <span class="role">[Jabatan Staf]</span>
+    <h3>[Nama Staf 1]</h3>
+    <p>[Deskripsi singkat tentang tugas dan peran di yayasan.]</p>
+   </div>
+  </article>
+
+  <!-- Staf 2 | foto: images/struktur/staf-2.jpg -->
+  <article class="member member-besar">
+   <div class="foto"><img src="images/struktur/staf-2.jpg" alt="Foto [Nama Staf 2]" loading="lazy"></div>
+   <div class="isi">
+    <span class="role">[Jabatan Staf]</span>
+    <h3>[Nama Staf 2]</h3>
+    <p>[Deskripsi singkat tentang tugas dan peran di yayasan.]</p>
+   </div>
+  </article>
+
+ </div>
+</div>
+</section>
+
+<!-- ================= ANAK ASUH (19 kartu) =================
+     GANTI: nama (h3), keterangan (p), foto (src + alt) di tiap kartu. -->
+<section id="anak-asuh">
+<div class="wrap">
+ <div class="rv"><h2>Anak Asuh</h2><p class="lead">19 anak yang menjadi bagian dari keluarga besar yayasan.</p></div>
+ <div class="grid-anak">
+
+   <!-- Anak Asuh 01 | foto: images/struktur/anak-01.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-01.jpg" alt="Foto Anak Asuh 01" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 01</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 02 | foto: images/struktur/anak-02.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-02.jpg" alt="Foto Anak Asuh 02" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 02</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 03 | foto: images/struktur/anak-03.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-03.jpg" alt="Foto Anak Asuh 03" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 03</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 04 | foto: images/struktur/anak-04.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-04.jpg" alt="Foto Anak Asuh 04" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 04</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 05 | foto: images/struktur/anak-05.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-05.jpg" alt="Foto Anak Asuh 05" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 05</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 06 | foto: images/struktur/anak-06.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-06.jpg" alt="Foto Anak Asuh 06" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 06</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 07 | foto: images/struktur/anak-07.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-07.jpg" alt="Foto Anak Asuh 07" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 07</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 08 | foto: images/struktur/anak-08.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-08.jpg" alt="Foto Anak Asuh 08" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 08</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 09 | foto: images/struktur/anak-09.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-09.jpg" alt="Foto Anak Asuh 09" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 09</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 10 | foto: images/struktur/anak-10.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-10.jpg" alt="Foto Anak Asuh 10" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 10</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 11 | foto: images/struktur/anak-11.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-11.jpg" alt="Foto Anak Asuh 11" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 11</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 12 | foto: images/struktur/anak-12.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-12.jpg" alt="Foto Anak Asuh 12" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 12</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 13 | foto: images/struktur/anak-13.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-13.jpg" alt="Foto Anak Asuh 13" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 13</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 14 | foto: images/struktur/anak-14.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-14.jpg" alt="Foto Anak Asuh 14" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 14</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 15 | foto: images/struktur/anak-15.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-15.jpg" alt="Foto Anak Asuh 15" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 15</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 16 | foto: images/struktur/anak-16.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-16.jpg" alt="Foto Anak Asuh 16" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 16</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 17 | foto: images/struktur/anak-17.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-17.jpg" alt="Foto Anak Asuh 17" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 17</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 18 | foto: images/struktur/anak-18.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-18.jpg" alt="Foto Anak Asuh 18" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 18</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+   <!-- Anak Asuh 19 | foto: images/struktur/anak-19.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/anak-19.jpg" alt="Foto Anak Asuh 19" loading="lazy"></div>
+    <div class="isi"><h3>Anak Asuh 19</h3><p>[Keterangan singkat]</p></div>
+   </article>
+
+ </div>
+</div>
+</section>
+
+<!-- ================= MENTOR EKSTERNAL (10 kartu) =================
+     GANTI: bidang/peran (span.role), nama (h3), deskripsi (p), foto. -->
+<section class="alt" id="mentor">
+<div class="wrap">
+ <div class="rv"><h2>Mentor Eksternal</h2><p class="lead">Para mentor yang turut mendukung proses pembinaan dan perkembangan anak-anak.</p></div>
+ <div class="grid-mentor">
+
+   <!-- Mentor 01 | foto: images/struktur/mentor-01.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-01.jpg" alt="Foto Mentor 01" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 01</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 02 | foto: images/struktur/mentor-02.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-02.jpg" alt="Foto Mentor 02" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 02</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 03 | foto: images/struktur/mentor-03.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-03.jpg" alt="Foto Mentor 03" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 03</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 04 | foto: images/struktur/mentor-04.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-04.jpg" alt="Foto Mentor 04" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 04</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 05 | foto: images/struktur/mentor-05.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-05.jpg" alt="Foto Mentor 05" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 05</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 06 | foto: images/struktur/mentor-06.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-06.jpg" alt="Foto Mentor 06" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 06</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 07 | foto: images/struktur/mentor-07.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-07.jpg" alt="Foto Mentor 07" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 07</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 08 | foto: images/struktur/mentor-08.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-08.jpg" alt="Foto Mentor 08" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 08</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 09 | foto: images/struktur/mentor-09.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-09.jpg" alt="Foto Mentor 09" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 09</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+   <!-- Mentor 10 | foto: images/struktur/mentor-10.jpg -->
+   <article class="member member-kecil">
+    <div class="foto"><img src="images/struktur/mentor-10.jpg" alt="Foto Mentor 10" loading="lazy"></div>
+    <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 10</h3><p>[Deskripsi singkat mentor]</p></div>
+   </article>
+
+ </div>
+</div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER (sama dengan index.html) ================= -->
+<footer>
+<div class="wrap">
+ <div class="fg">
+  <div><h3>Yayasan Rumah Singgah Binabangsa</h3><p>Rumah sosial di Kota Tegal sejak 2011. Menjadi keluarga baru bagi anak-anak untuk bertumbuh dan meraih mimpi.</p></div>
+  <div><h3>Tautan cepat</h3><ul><li><a href="index.html#tentang">Tentang</a></li><li><a href="index.html#program">Program</a></li><li><a href="struktur.html">Struktur</a></li><li><a href="index.html#transparansi">Transparansi</a></li><li><a href="index.html#donasi">Donasi</a></li></ul></div>
+  <div><h3>Legalitas</h3>
+   <p>SK Kemensos / Izin No. [nomor izin]<br>Akta Pendirian No. [nomor akta]</p></div>
+ </div>
+ <p class="copy">&copy; <span id="yr">2026</span> Yayasan Rumah Singgah Binabangsa. Seluruh hak cipta dilindungi.</p>
+</div>
+</footer>
+
+<!-- Tombol WhatsApp melayang (sama dengan index.html) -->
+<a class="wa" id="wafloat" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.800l-.3-.2-3 .8.8-2.900-.2-.3A8 8 0 0112 4z"/><path d="M8.500 7.500c-.3.3-.8 1-.8 1.800 0 2.400 3.200 5.700 6 6 .8.100 1.500-.4 1.800-.8.200-.3.100-.6-.1-.7l-1.500-.8c-.3-.1-.5 0-.7.200l-.5.600c-.2.200-.4.200-.6.100-1-.5-2-1.500-2.400-2.400-.1-.2 0-.4.100-.5l.5-.6c.2-.2.200-.4.100-.6l-.7-1.500c-.1-.3-.5-.4-.7-.2z"/></svg></a>
+
+<script>
+/* Popup logo */
+function tampilkanGambar(e){
+  if(e){e.preventDefault();e.stopPropagation();}
+  document.getElementById("popup").style.display="flex";
+}
+function tutupGambar(){document.getElementById("popup").style.display="none"}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')tutupGambar()});
+
+/* Nomor WhatsApp: angka saja, tanpa +, spasi, atau tanda hubung */
+const WA='62895383246045';
+document.getElementById('wafloat').href=`https://wa.me/${WA}?text=${encodeURIComponent('Halo Rumah Singgah Binabangsa, saya ingin bertanya.')}`;
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* Menu hamburger */
+const bg=document.querySelector('.burger'),mn=document.getElementById('menu');
+bg.addEventListener('click',()=>{const o=mn.classList.toggle('open');bg.setAttribute('aria-expanded',o);bg.setAttribute('aria-label',o?'Tutup menu':'Buka menu')});
+mn.addEventListener('click',e=>{if(e.target.tagName==='A'){mn.classList.remove('open');bg.setAttribute('aria-expanded',false)}});
+
+/* Jika file foto belum ada, sembunyikan ikon rusak (siluet pengganti akan tampil) */
+document.querySelectorAll('.foto img').forEach(img=>{
+ const hide=()=>img.remove();
+ img.addEventListener('error',hide);
+ if(img.complete&&img.naturalWidth===0)hide();
+});
+
+/* Angka statistik naik + judul muncul lembut */
+const io=new IntersectionObserver(es=>es.forEach(e=>{
+ if(!e.isIntersecting)return;const el=e.target;io.unobserve(el);
+ if(el.dataset.n){const end=+el.dataset.n,t0=performance.now();
+  const step=t=>{const p=Math.min((t-t0)/1400,1);el.textContent=Math.round(end*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(step)};requestAnimationFrame(step)}
+ else el.classList.add('in');
+}),{threshold:.25});
+document.querySelectorAll('[data-n],.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
