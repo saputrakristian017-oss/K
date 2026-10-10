@@ -171,12 +171,10 @@ header{view-transition-name:header}
 
 <header>
 <div class="wrap nav">
- <a class="logo" href="#beranda" aria-label="Beranda Yayasan Rumah Singgah Bina Bangsa">
-  <!-- GANTI: logo asli (ganti <svg> ini dengan <img src="logo.png" alt="Logo Binabangsa" width="38" height="38">) -->
-  <img src="Logo.png" alt="Logo Bina Bangsa" width="38" height="38"
-     onclick="tampilkanGambar()">
-  <span>Rumah Singgah<br>Bina Bangsa</span>
- </a>
+ <div class="logo">
+  <img src="Logo.png" alt="Logo Bina Bangsa" width="38" height="38" onclick="tampilkanGambar()" style="cursor:pointer">
+  <a href="index.html" style="text-decoration:none;color:inherit"><span>Rumah Singgah<br>Bina Bangsa</span></a>
+</div>
  <button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
  <ul class="menu" id="menu">
   <li><a href="#beranda">Beranda</a></li>
