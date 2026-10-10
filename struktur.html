@@ -12,16 +12,18 @@
 <!-- Urutan sama seperti index.html: style.css dulu, lalu struktur.css -->
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="struktur.css">
+<!-- Muat halaman tujuan lebih dulu di latar belakang supaya perpindahan instan -->
+<script type="speculationrules">{"prerender":[{"urls":["index.html"],"eagerness":"moderate"}]}</script>
 </head>
 <body>
 
 <!-- ================= HEADER / NAVBAR (sama dengan index.html) ================= -->
 <header>
 <div class="wrap nav">
- <a class="logo" href="index.html" aria-label="Beranda Yayasan Rumah Singgah Bina Bangsa">
-  <img src="Logo.png" alt="Logo Bina Bangsa" width="38" height="38" onclick="tampilkanGambar(event)">
-  <span>Rumah Singgah<br>Bina Bangsa</span>
- </a>
+<div class="logo">
+  <img src="Logo.png" alt="Logo Bina Bangsa" width="38" height="38" onclick="tampilkanGambar()" style="cursor:pointer">
+  <a href="index.html" style="text-decoration:none;color:inherit"><span>Rumah Singgah<br>Bina Bangsa</span></a>
+</div>
  <button class="burger" aria-label="Buka menu" aria-expanded="false" aria-controls="menu"><span></span><span></span><span></span></button>
  <ul class="menu" id="menu">
   <li><a href="index.html#beranda">Beranda</a></li>
@@ -74,27 +76,47 @@
      GANTI: nama (h3), jabatan (span.role), deskripsi (p), foto (src + alt). -->
 <section id="pemimpin">
 <div class="wrap">
- <div class="rv"><h2>Pemimpin Yayasan</h2><p class="lead">Mereka yang memimpin dan menjaga arah pelayanan yayasan.</p></div>
+ <div class="rv"><h2>Pemimpin Yayasan</h2><p class="lead">Mereka yang memimpin dan menjaga arah pelayanan yayasan. Klik kartu untuk melihat profil lengkap.</p></div>
  <div class="grid-orang">
 
   <!-- Pemimpin 1 | foto: images/struktur/pemimpin-1.jpg -->
-  <article class="member member-besar">
+  <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil [Nama Pemimpin 1]" class="member member-besar">
    <div class="foto"><img src="images/struktur/pemimpin-1.jpg" alt="Foto [Nama Pemimpin 1]" loading="lazy"></div>
    <div class="isi">
     <span class="role">Pemimpin Yayasan</span>
     <h3>[Nama Pemimpin 1]</h3>
     <p>[Deskripsi singkat tentang peran dan pelayanan beliau di yayasan.]</p>
    </div>
+  
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap: perjalanan, peran, dan pelayanan beliau di yayasan. Tulis beberapa kalimat.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Asal</dt><dd>[Kota asal]</dd>
+      <dt>Motto</dt><dd>[Motto atau kutipan]</dd>
+     </dl>
+    </div>
   </article>
 
   <!-- Pemimpin 2 | foto: images/struktur/pemimpin-2.jpg -->
-  <article class="member member-besar">
+  <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil [Nama Pemimpin 2]" class="member member-besar">
    <div class="foto"><img src="images/struktur/pemimpin-2.jpg" alt="Foto [Nama Pemimpin 2]" loading="lazy"></div>
    <div class="isi">
     <span class="role">Pemimpin Yayasan</span>
     <h3>[Nama Pemimpin 2]</h3>
     <p>[Deskripsi singkat tentang peran dan pelayanan beliau di yayasan.]</p>
    </div>
+  
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap: perjalanan, peran, dan pelayanan beliau di yayasan. Tulis beberapa kalimat.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Asal</dt><dd>[Kota asal]</dd>
+      <dt>Motto</dt><dd>[Motto atau kutipan]</dd>
+     </dl>
+    </div>
   </article>
 
  </div>
@@ -108,23 +130,43 @@
  <div class="grid-orang">
 
   <!-- Staf 1 | foto: images/struktur/staf-1.jpg -->
-  <article class="member member-besar">
+  <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil [Nama Staf 1]" class="member member-besar">
    <div class="foto"><img src="images/struktur/staf-1.jpg" alt="Foto [Nama Staf 1]" loading="lazy"></div>
    <div class="isi">
     <span class="role">[Jabatan Staf]</span>
     <h3>[Nama Staf 1]</h3>
     <p>[Deskripsi singkat tentang tugas dan peran di yayasan.]</p>
    </div>
+  
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap: tugas harian dan peran di yayasan. Tulis beberapa kalimat.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Asal</dt><dd>[Kota asal]</dd>
+      <dt>Motto</dt><dd>[Motto atau kutipan]</dd>
+     </dl>
+    </div>
   </article>
 
   <!-- Staf 2 | foto: images/struktur/staf-2.jpg -->
-  <article class="member member-besar">
+  <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil [Nama Staf 2]" class="member member-besar">
    <div class="foto"><img src="images/struktur/staf-2.jpg" alt="Foto [Nama Staf 2]" loading="lazy"></div>
    <div class="isi">
     <span class="role">[Jabatan Staf]</span>
     <h3>[Nama Staf 2]</h3>
     <p>[Deskripsi singkat tentang tugas dan peran di yayasan.]</p>
    </div>
+  
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap: tugas harian dan peran di yayasan. Tulis beberapa kalimat.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Asal</dt><dd>[Kota asal]</dd>
+      <dt>Motto</dt><dd>[Motto atau kutipan]</dd>
+     </dl>
+    </div>
   </article>
 
  </div>
@@ -139,118 +181,327 @@
  <div class="grid-anak">
 
    <!-- Anak Asuh 01 | foto: images/struktur/anak-01.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 01" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-01.jpg" alt="Foto Anak Asuh 01" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 01</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 02 | foto: images/struktur/anak-02.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 02" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-02.jpg" alt="Foto Anak Asuh 02" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 02</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 03 | foto: images/struktur/anak-03.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 03" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-03.jpg" alt="Foto Anak Asuh 03" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 03</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 04 | foto: images/struktur/anak-04.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 04" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-04.jpg" alt="Foto Anak Asuh 04" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 04</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 05 | foto: images/struktur/anak-05.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 05" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-05.jpg" alt="Foto Anak Asuh 05" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 05</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 06 | foto: images/struktur/anak-06.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 06" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-06.jpg" alt="Foto Anak Asuh 06" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 06</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 07 | foto: images/struktur/anak-07.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 07" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-07.jpg" alt="Foto Anak Asuh 07" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 07</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 08 | foto: images/struktur/anak-08.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 08" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-08.jpg" alt="Foto Anak Asuh 08" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 08</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 09 | foto: images/struktur/anak-09.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 09" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-09.jpg" alt="Foto Anak Asuh 09" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 09</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 10 | foto: images/struktur/anak-10.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 10" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-10.jpg" alt="Foto Anak Asuh 10" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 10</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 11 | foto: images/struktur/anak-11.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 11" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-11.jpg" alt="Foto Anak Asuh 11" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 11</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 12 | foto: images/struktur/anak-12.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 12" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-12.jpg" alt="Foto Anak Asuh 12" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 12</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 13 | foto: images/struktur/anak-13.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 13" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-13.jpg" alt="Foto Anak Asuh 13" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 13</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 14 | foto: images/struktur/anak-14.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 14" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-14.jpg" alt="Foto Anak Asuh 14" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 14</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 15 | foto: images/struktur/anak-15.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 15" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-15.jpg" alt="Foto Anak Asuh 15" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 15</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 16 | foto: images/struktur/anak-16.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 16" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-16.jpg" alt="Foto Anak Asuh 16" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 16</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 17 | foto: images/struktur/anak-17.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 17" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-17.jpg" alt="Foto Anak Asuh 17" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 17</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 18 | foto: images/struktur/anak-18.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 18" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-18.jpg" alt="Foto Anak Asuh 18" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 18</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Anak Asuh 19 | foto: images/struktur/anak-19.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Anak Asuh 19" class="member member-kecil">
     <div class="foto"><img src="images/struktur/anak-19.jpg" alt="Foto Anak Asuh 19" loading="lazy"></div>
     <div class="isi"><h3>Anak Asuh 19</h3><p>[Keterangan singkat]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Cerita singkat tentang anak ini: kepribadian, prestasi, atau kegiatan favorit.]</p>
+     <dl>
+      <dt>Bergabung sejak</dt><dd>[Tahun]</dd>
+      <dt>Sekolah / Kelas</dt><dd>[Sekolah, kelas]</dd>
+      <dt>Hobi</dt><dd>[Hobi]</dd>
+      <dt>Cita-cita</dt><dd>[Cita-cita]</dd>
+     </dl>
+    </div>
+  </article>
 
  </div>
 </div>
@@ -264,64 +515,164 @@
  <div class="grid-mentor">
 
    <!-- Mentor 01 | foto: images/struktur/mentor-01.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 01" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-01.jpg" alt="Foto Mentor 01" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 01</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 02 | foto: images/struktur/mentor-02.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 02" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-02.jpg" alt="Foto Mentor 02" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 02</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 03 | foto: images/struktur/mentor-03.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 03" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-03.jpg" alt="Foto Mentor 03" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 03</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 04 | foto: images/struktur/mentor-04.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 04" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-04.jpg" alt="Foto Mentor 04" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 04</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 05 | foto: images/struktur/mentor-05.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 05" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-05.jpg" alt="Foto Mentor 05" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 05</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 06 | foto: images/struktur/mentor-06.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 06" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-06.jpg" alt="Foto Mentor 06" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 06</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 07 | foto: images/struktur/mentor-07.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 07" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-07.jpg" alt="Foto Mentor 07" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 07</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 08 | foto: images/struktur/mentor-08.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 08" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-08.jpg" alt="Foto Mentor 08" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 08</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 09 | foto: images/struktur/mentor-09.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 09" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-09.jpg" alt="Foto Mentor 09" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 09</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
    <!-- Mentor 10 | foto: images/struktur/mentor-10.jpg -->
-   <article class="member member-kecil">
+   <article tabindex="0" role="button" aria-haspopup="dialog" aria-label="Lihat profil Mentor 10" class="member member-kecil">
     <div class="foto"><img src="images/struktur/mentor-10.jpg" alt="Foto Mentor 10" loading="lazy"></div>
     <div class="isi"><span class="role">[Bidang / Peran]</span><h3>Mentor 10</h3><p>[Deskripsi singkat mentor]</p></div>
-   </article>
+   
+    <!-- PROFIL LENGKAP (muncul saat kartu diklik) -->
+    <div class="profil-detail" hidden>
+     <p>[Profil lengkap mentor: latar belakang dan kontribusinya bagi anak-anak.]</p>
+     <dl>
+      <dt>Bidang</dt><dd>[Bidang keahlian]</dd>
+      <dt>Mendampingi sejak</dt><dd>[Tahun]</dd>
+      <dt>Kegiatan</dt><dd>[Kegiatan yang dibimbing]</dd>
+     </dl>
+    </div>
+  </article>
 
  </div>
 </div>
@@ -345,14 +696,25 @@
 <!-- Tombol WhatsApp melayang (sama dengan index.html) -->
 <a class="wa" id="wafloat" href="#" target="_blank" rel="noopener" aria-label="Chat WhatsApp"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 00-8.7 14.9L2 22l5.3-1.4A10 10 0 1012 2zm0 2a8 8 0 11-4.2 14.800l-.3-.2-3 .8.8-2.900-.2-.3A8 8 0 0112 4z"/><path d="M8.500 7.500c-.3.3-.8 1-.8 1.800 0 2.400 3.200 5.700 6 6 .8.100 1.500-.4 1.800-.8.200-.3.100-.6-.1-.7l-1.500-.8c-.3-.1-.5 0-.7.200l-.5.600c-.2.200-.4.200-.6.100-1-.5-2-1.500-2.400-2.400-.1-.2 0-.4.100-.5l.5-.6c.2-.2.200-.4.100-.6l-.7-1.500c-.1-.3-.5-.4-.7-.2z"/></svg></a>
 
+
+<!-- ================= POPUP PROFIL =================
+     Isinya diisi otomatis oleh JavaScript dari kartu yang diklik. Tidak perlu diubah. -->
+<div class="modal-profil" id="modalProfil" role="dialog" aria-modal="true" aria-labelledby="mpNama">
+ <div class="mp-kartu">
+  <button class="mp-tutup" type="button" aria-label="Tutup profil">&times;</button>
+  <div class="foto mp-foto" id="mpFoto"></div>
+  <div class="mp-isi">
+   <span class="role" id="mpRole"></span>
+   <h3 id="mpNama"></h3>
+   <div id="mpDetail"></div>
+  </div>
+ </div>
+</div>
+
 <script>
 /* Popup logo */
-function tampilkanGambar(e){
-  if(e){e.preventDefault();e.stopPropagation();}
-  document.getElementById("popup").style.display="flex";
-}
+function tampilkanGambar(){document.getElementById("popup").style.display="flex"}
 function tutupGambar(){document.getElementById("popup").style.display="none"}
-document.addEventListener('keydown',e=>{if(e.key==='Escape')tutupGambar()});
 
 /* Nomor WhatsApp: angka saja, tanpa +, spasi, atau tanda hubung */
 const WA='62895383246045';
@@ -379,6 +741,33 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{
  else el.classList.add('in');
 }),{threshold:.25});
 document.querySelectorAll('[data-n],.rv').forEach(el=>io.observe(el));
+
+/* ===== Popup profil: klik kartu anggota ===== */
+const mp=document.getElementById('modalProfil');
+let kartuAsal=null;
+function bukaProfil(kartu){
+ kartuAsal=kartu;
+ const img=kartu.querySelector('.foto img'),role=kartu.querySelector('.role'),det=kartu.querySelector('.profil-detail');
+ const foto=document.getElementById('mpFoto'),r=document.getElementById('mpRole');
+ foto.innerHTML='';
+ if(img){const i=document.createElement('img');i.src=img.src;i.alt=img.alt;i.addEventListener('error',()=>i.remove());foto.appendChild(i)}
+ r.textContent=role?role.textContent:'';r.style.display=role?'inline-block':'none';
+ document.getElementById('mpNama').textContent=kartu.querySelector('h3').textContent;
+ document.getElementById('mpDetail').innerHTML=det?det.innerHTML:'';
+ mp.classList.add('buka');document.body.classList.add('modal-terbuka');
+ mp.querySelector('.mp-kartu').scrollTop=0;
+ mp.querySelector('.mp-tutup').focus();
+}
+function tutupProfil(){
+ mp.classList.remove('buka');document.body.classList.remove('modal-terbuka');
+ if(kartuAsal)kartuAsal.focus({preventScroll:true});
+}
+document.querySelectorAll('.member').forEach(k=>{
+ k.addEventListener('click',()=>bukaProfil(k));
+ k.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();bukaProfil(k)}});
+});
+mp.addEventListener('click',e=>{if(e.target===mp||e.target.closest('.mp-tutup'))tutupProfil()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mp.classList.contains('buka'))tutupProfil()});
 </script>
 </body>
 </html>
