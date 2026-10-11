@@ -203,20 +203,6 @@ footer ul{list-style:none}footer li{margin:.3rem 0}footer a{text-decoration:none
 
 
 /* =====================================================================
-   BAGIAN 3 - TRANSISI HALAMAN HALUS
-   (blok yang sama juga ditempel di <style> index.html)
-   ===================================================================== */
-@view-transition{navigation:auto}            /* pindah halaman = cross-fade */
-header{view-transition-name:header}          /* header diam di tempat, tidak ikut berkedip */
-::view-transition-old(root),::view-transition-new(root){animation-duration:.25s}
-/* Cadangan untuk browser lama: fade-in lembut saat halaman terbuka */
-@supports not (view-transition-name:none){
-  body{animation:halamanMasuk .4s ease both}
-  @keyframes halamanMasuk{from{opacity:0}to{opacity:1}}
-}
-
-
-/* =====================================================================
    BAGIAN 4 - POPUP PROFIL (muncul saat kartu anggota diklik)
    ===================================================================== */
 
@@ -237,28 +223,34 @@ header{view-transition-name:header}          /* header diam di tempat, tidak iku
 .modal-profil.buka{display:flex}
 body.modal-terbuka{overflow:hidden}   /* halaman di belakang tidak ikut ter-scroll */
 
-/* Kartu popup: agak panjang ke bawah, bisa di-scroll */
+/* Kartu popup: foto tampil UTUH, biodata di bawah foto. */
 .mp-kartu{
   position:relative;
   width:min(520px,100%);
-  max-height:90vh;
-  overflow-y:auto;
   background:#fff;
   border-radius:var(--r);
   box-shadow:0 20px 60px rgba(0,0,0,.35);
+  overflow:hidden;
   animation:profilMasuk .25s ease-out;
+}
+.mp-scroll{
+  max-height:90vh;
+  overflow-y:auto;
+  overscroll-behavior:contain;
 }
 @keyframes profilMasuk{from{opacity:0;transform:scale(.92)}to{opacity:1;transform:scale(1)}}
 
-.mp-foto{aspect-ratio:1/1;max-height:46vh;width:100%}
+.mp-foto{width:100%;background-position:center}
+.mp-foto img{position:static;display:block;width:100%;height:auto;object-fit:contain}
+.mp-foto:not(:has(img)){aspect-ratio:4/3}
 
 .mp-tutup{
-  position:absolute;top:12px;right:12px;z-index:2;
+  position:absolute;top:12px;right:22px;z-index:2;
   width:40px;height:40px;border-radius:50%;
   border:0;cursor:pointer;
-  background:rgba(255,255,255,.92);
+  background:rgba(255,255,255,.95);
   color:var(--navy);font-size:1.7rem;line-height:1;
-  box-shadow:0 2px 8px rgba(0,0,0,.2);
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
 }
 .mp-tutup:hover{background:#fff;color:var(--orange)}
 
@@ -278,4 +270,49 @@ body.modal-terbuka{overflow:hidden}   /* halaman di belakang tidak ikut ter-scro
 @media(max-width:560px){
   .mp-isi{padding:1.2rem 1.2rem 1.5rem}
   .mp-isi h3{font-size:1.3rem}
+}
+
+/* =====================================================================
+   BAGIAN 5 - KELOMPOK ANGGOTA (Aktif / Alumni / Pernah Dilayani)
+   ===================================================================== */
+.grup + .grup{margin-top:3.2rem}
+
+/* Judul kelompok */
+.sub-judul{
+  display:flex;align-items:center;flex-wrap:wrap;
+  gap:.7rem;
+  font-size:1.45rem;
+  margin:0 0 1.2rem;
+}
+
+/* Kotak catatan (penerimaan lansia) */
+.catatan{
+  margin-top:1.6rem;
+  background:#fff;
+  border-radius:var(--r);
+  border-left:5px solid var(--amber);
+  box-shadow:var(--sh);
+  padding:1.2rem 1.5rem;
+}
+.catatan strong{display:block;font-family:'Lora',serif;color:var(--navy);margin-bottom:.2rem}
+.catatan p{color:var(--mute);overflow-wrap:anywhere}
+@media(max-width:560px){.catatan{padding:1rem 1.1rem}.sub-judul{font-size:1.25rem}}
+
+
+/* =====================================================================
+   BAGIAN 6 - KARTU PEMIMPIN (1 kartu foto keluarga)
+   ===================================================================== */
+.grid-keluarga{max-width:920px;margin:0 auto}
+.member-keluarga{
+  display:grid;
+  grid-template-columns:1.15fr 1fr;   /* foto keluarga kiri, teks kanan */
+}
+.member-keluarga .foto{min-height:300px}
+.member-keluarga .isi{padding:2rem;align-self:center}
+.member-keluarga .isi h3{font-size:1.5rem}
+@media(max-width:700px){
+  .member-keluarga{grid-template-columns:1fr}          /* foto di atas, teks di bawah */
+  .member-keluarga .foto{min-height:0;aspect-ratio:4/3}
+  .member-keluarga .isi{padding:1.3rem}
+  .member-keluarga .isi h3{font-size:1.3rem}
 }
