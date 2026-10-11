@@ -301,18 +301,35 @@ body.modal-terbuka{overflow:hidden}   /* halaman di belakang tidak ikut ter-scro
 
 /* =====================================================================
    BAGIAN 6 - KARTU PEMIMPIN (1 kartu foto keluarga)
+   Mobile dulu: foto di atas (tampil UTUH, tidak dipotong), teks di bawah.
+   Di layar lebar: foto kiri, teks kanan.
    ===================================================================== */
 .grid-keluarga{max-width:920px;margin:0 auto}
-.member-keluarga{
-  display:grid;
-  grid-template-columns:1.15fr 1fr;   /* foto keluarga kiri, teks kanan */
+
+.member-keluarga{display:block}
+
+/* Foto keluarga mengikuti bentuk aslinya, jadi tidak mungkin "hilang" */
+.member-keluarga .foto{width:100%}
+.member-keluarga .foto img{
+  position:static;
+  display:block;
+  width:100%;
+  height:auto;
+  object-fit:contain;
 }
-.member-keluarga .foto{min-height:300px}
-.member-keluarga .isi{padding:2rem;align-self:center}
-.member-keluarga .isi h3{font-size:1.5rem}
-@media(max-width:700px){
-  .member-keluarga{grid-template-columns:1fr}          /* foto di atas, teks di bawah */
-  .member-keluarga .foto{min-height:0;aspect-ratio:4/3}
-  .member-keluarga .isi{padding:1.3rem}
-  .member-keluarga .isi h3{font-size:1.3rem}
+/* Jika file foto belum ada: tampil kotak pengganti berbentuk siluet */
+.member-keluarga .foto:not(:has(img)){aspect-ratio:4/3}
+
+.member-keluarga .isi{padding:1.3rem 1.3rem 1.5rem}
+.member-keluarga .isi h3{font-size:1.3rem;overflow-wrap:anywhere}
+.member-keluarga .isi p{overflow-wrap:anywhere}
+
+@media(min-width:701px){
+  .member-keluarga{
+    display:grid;
+    grid-template-columns:1.15fr 1fr;
+    align-items:center;
+  }
+  .member-keluarga .isi{padding:2rem}
+  .member-keluarga .isi h3{font-size:1.5rem}
 }
